@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+main {
+    background-color: #FFF;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.button-box {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    font-size: 40px;
+    cursor: pointer;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+#rock {
+    background-color: #2576A2;
+}
+
+#paper {
+    background-color: #DE1520;
+}
+
+#scissors {
+    background-color: #a3F521;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.result {
+    margin-bottom: 15px;
+}
+
+#player-score span {
+    color: #1515FF;
+}
+
+#computer-score span {
+    color: #FF1515;
+}
