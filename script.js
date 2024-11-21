@@ -6,10 +6,10 @@ const playerScore = document.querySelector(".player")
 const computerScore = document.querySelector(".computer")
 
 function computerChoice() {
-    const comChoice = Math.random() * 3
-    if (comChoice >= 0 && comChoice < 1) {
+    const comChoice = Math.floor(Math.random() * 3)
+    if (comChoice === 0) {
         return "rock"
-    } else if (comChoice >= 1 && comChoice < 2) {
+    } else if (comChoice === 1) {
         return "paper"
     } else {
         return "scissors"
@@ -19,12 +19,16 @@ function computerChoice() {
 function startGame(choice) {
     const comChoice = computerChoice()
     if (choice === comChoice) {
-        result.innerHTML = "Vocês empataram !!"
-    } else if ((choice === "rock" && comChoice === "paper") || (choice === "paper" && comChoice === "scissors") || (choice === "scissors" && comChoice === "rock")) {
-        result.innerHTML = "Você perdeu !!"
+        result.innerHTML = "Vocês empataram !!😐"
+    } else if (
+        (choice === "rock" && comChoice === "paper") || 
+        (choice === "paper" && comChoice === "scissors") || 
+        (choice === "scissors" && comChoice === "rock")
+    ) {
+        result.innerHTML = "Você perdeu !!😢"
         computerScore.innerHTML++
     } else {
-        result.innerHTML = "Você ganhou !!"
+        result.innerHTML = "Você ganhou !!😎"
         playerScore.innerHTML++
     }
 }
