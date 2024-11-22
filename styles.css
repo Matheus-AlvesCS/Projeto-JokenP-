@@ -60,14 +60,27 @@ button:active {
     background-color: #a3F521;
 }
 
+.score-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.round-score {
+    max-width: 200px;
+}
+
+#player-score, #player-rounds {
+    margin-bottom: 20px;
+}
+
 p {
     font-size: 20px;
-    text-align: center;
     font-weight: 700;
 }
 
 .result {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 #player-score span {
@@ -75,5 +88,13 @@ p {
 }
 
 #computer-score span {
+    color: #FF1515;
+}
+
+#player-rounds span {
+    color: #1515FF;
+}
+
+#computer-rounds span {
     color: #FF1515;
 }
